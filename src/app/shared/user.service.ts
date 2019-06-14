@@ -1,6 +1,8 @@
-import {UserModel} from '../shared/user.model';
-import {AlbumModel} from '../shared/album.model';
+import {UserModel} from './user.model';
+import {AlbumModel} from './album.model';
+import {Injectable} from '@angular/core';
 
+@Injectable({providedIn: 'root'})
 export class UserService {
   private users: UserModel[] = [
     new UserModel(
@@ -54,6 +56,10 @@ export class UserService {
       ]
     ),
   ];
+
+  getUser(userIndex: number) {
+    return this.users[userIndex];
+  }
 
   getUsers(): UserModel[] {
     return this.users.slice();
