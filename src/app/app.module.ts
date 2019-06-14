@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import {RoutingModule} from './routing.module';
 import {UserDetailsComponent} from './user-details/user-details.component';
 import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 
 @NgModule({
@@ -22,8 +24,9 @@ import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
   imports: [
     BrowserModule,
     RoutingModule,
+    AngularFontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

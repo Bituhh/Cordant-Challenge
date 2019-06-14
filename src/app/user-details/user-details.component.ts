@@ -13,8 +13,10 @@ export class UserDetailsComponent implements OnInit {
 
   user: UserModel;
   displayAlbum: AlbumModel;
+  private viewMode: string;
 
   constructor(private route: ActivatedRoute, private userService: UserService) {
+    this.viewMode = 'col-3';
   }
 
   ngOnInit() {
@@ -28,5 +30,18 @@ export class UserDetailsComponent implements OnInit {
 
   onSelect(album: AlbumModel) {
     this.displayAlbum = album;
+  }
+
+  onChangeView(mode: string) {
+    this.viewMode = mode;
+  }
+
+  toggleClass() {
+    return {
+      'col-md-12': this.viewMode == 'col-1',
+      'col-md-6': this.viewMode === 'col-2',
+      'col-md-4': this.viewMode === 'col-3',
+      'col-md-3': this.viewMode === 'col-4'
+    };
   }
 }
