@@ -1,14 +1,13 @@
 <div class="row">
-  <div class="col-md-5">
+    <div class="col-md-5">
     <div class="row">
       <div class="col-12 list-group">
-        <app-user *ngFor="let user of users;let i = index" [userData]="user" [index]="i"></app-user>
+        <app-user *ngFor="let userData of users;let i = index" [user]="userData" [index]="i"></app-user>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-7">
-      <router-outlet></router-outlet>
-    </div>
+  <br>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
   </div>
 </div>

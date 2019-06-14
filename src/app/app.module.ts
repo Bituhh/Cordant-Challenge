@@ -7,6 +7,8 @@ import { UserComponent } from './user-list/user/user.component';
 import { HeaderComponent } from './header/header.component';
 import {RoutingModule} from './routing.module';
 import {UserDetailsComponent} from './user-details/user-details.component';
+import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,12 @@ import {UserDetailsComponent} from './user-details/user-details.component';
     HeaderComponent,
     UserComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    LimitLengthPipe,
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import {UserModel} from './user.model';
 import {AlbumModel} from './album.model';
 import {Injectable} from '@angular/core';
+import {ImageModel} from './image.model';
 
 @Injectable({providedIn: 'root'})
 export class UserService {
@@ -8,51 +9,202 @@ export class UserService {
     new UserModel(
       'User 1',
       [
-        new AlbumModel('Album 1', ['http://image-url.com']),
-        new AlbumModel('Album 2', ['http://image-url.com']),
-        new AlbumModel('Album 3', ['http://image-url.com']),
-        new AlbumModel('Album 4', ['http://image-url.com']),
-        new AlbumModel('Album 5', ['http://image-url.com']),
+        new AlbumModel('Album 1', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 2', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 3', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 4', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 5', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
       ]
     ),
     new UserModel(
       'User 2',
       [
-        new AlbumModel('Album 1', ['http://image-url.com']),
-        new AlbumModel('Album 2', ['http://image-url.com']),
-        new AlbumModel('Album 3', ['http://image-url.com']),
-        new AlbumModel('Album 4', ['http://image-url.com']),
-        new AlbumModel('Album 5', ['http://image-url.com']),
+        new AlbumModel('Album 1', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 2', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 3', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 4', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 5', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
       ]
     ),
     new UserModel(
       'User 3',
       [
-        new AlbumModel('Album 1', ['http://image-url.com']),
-        new AlbumModel('Album 2', ['http://image-url.com']),
-        new AlbumModel('Album 3', ['http://image-url.com']),
-        new AlbumModel('Album 4', ['http://image-url.com']),
-        new AlbumModel('Album 5', ['http://image-url.com']),
+        new AlbumModel('Album 1', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 2', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 3', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 4', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 5', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
       ]
     ),
     new UserModel(
       'User 4',
       [
-        new AlbumModel('Album 1', ['http://image-url.com']),
-        new AlbumModel('Album 2', ['http://image-url.com']),
-        new AlbumModel('Album 3', ['http://image-url.com']),
-        new AlbumModel('Album 4', ['http://image-url.com']),
-        new AlbumModel('Album 5', ['http://image-url.com']),
+        new AlbumModel('Album 1', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 2', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 3', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 4', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 5', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
       ]
     ),
     new UserModel(
       'User 5',
       [
-        new AlbumModel('Album 1', ['http://image-url.com']),
-        new AlbumModel('Album 2', ['http://image-url.com']),
-        new AlbumModel('Album 3', ['http://image-url.com']),
-        new AlbumModel('Album 4', ['http://image-url.com']),
-        new AlbumModel('Album 5', ['http://image-url.com']),
+        new AlbumModel('Album 1', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 2', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 3', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 4', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
+        new AlbumModel('Album 5', [
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+          new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
+        ]),
       ]
     ),
   ];
@@ -78,11 +230,11 @@ export class UserService {
     this.users[userIndex].albums.push(album);
   }
 
-  addImage(userIndex: number, albumName: string, imageUrl: string): void {
+  addImage(userIndex: number, albumName: string, image: ImageModel): void {
     this.users[userIndex].albums.find(
       (album: AlbumModel) => {
         return album.name === albumName;
       }
-    ).images.push(imageUrl);
+    ).images.push(image);
   }
 }

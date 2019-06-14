@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UserModel} from '../../shared/user.model';
+import {AlbumModel} from '../../shared/album.model';
 
 @Component({
   selector: 'app-user',
@@ -8,13 +9,20 @@ import {UserModel} from '../../shared/user.model';
 })
 export class UserComponent implements OnInit {
 
-  @Input('userData') user: UserModel;
-  @Input('index') index: UserModel;
+  @Input() user: UserModel;
+  @Input() index: UserModel;
+  description: string;
 
   constructor() {
   }
 
   ngOnInit() {
+    const temp = [];
+    this.user.albums.forEach(
+      (album: AlbumModel) => {
+        temp.push(album.name as string);
+      }
+    );
+    this.description = temp.join(', ');
   }
-
 }

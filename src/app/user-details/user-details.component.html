@@ -1,6 +1,36 @@
-<div class="row text-center border">
+<div class="row">
   <div class="col-12">
-    <h4>{{user.name}}</h4>
-
+    <div class="card">
+      <h4 class="card-header text-center text-md-center">{{user.name}}<span class="float-right">
+      <label for="albumSelector"></label>
+        <select class="custom-select" id="albumSelector">
+          <option class="custom-control"
+                  [value]="album.name"
+                  *ngFor="let album of user.albums"
+                  (selectstart)="onSelect(album)"
+                  (select)="onSelect(album)">
+            {{album.name}}
+          </option>
+          </select>
+      </span>
+      </h4>
+      <div class="row" style="padding: 10px;">
+        <div class="col-md-4" *ngFor="let image of displayAlbum.images" style="padding-bottom: 10px;">
+          <a [href]="image.url">
+            <div class="card">
+              <span class="card-img-top">
+                <img class="card-img img-fluid" [src]="image.url" [alt]="image.name">
+              </span>
+              <span class="card-title text-center">{{image.name}}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center" style="padding-bottom: 10px">
+          <button class="btn btn-primary">Edit Album</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
