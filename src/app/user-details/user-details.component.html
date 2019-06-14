@@ -16,12 +16,19 @@
           </select>
         </li>
         <li class="dropdown">
-          <a href="" class="nav-link dropdown-toggle show"><fa name="th"></fa></a>
-          <ul class="dropdown-menu dropdown-menu-right show">
-            <li class="dropdown-item"><a class="dropdown-item-text" (click)="onChangeView('col-1')">List View</a></li>
+          <a style="cursor: pointer;" class="nav-link dropdown-toggle" role="button" appDropdown>
+            <fa name="th"></fa>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-item">
+              <a class="dropdown-item-text" (click)="onChangeView('col-1')">List View</a>
+            </li>
             <li class="dropdown-item dropdown dropleft">
-              <a class="dropdown-item-text dropdown-toggle" (click)="onChangeView('col-3')">Column View</a>
-              <ul class="dropdown-menu dropdown-menu-right show">
+              <a class="dropdown-item-text dropdown-toggle"
+                 role="button"
+                 (click)="onChangeView('col-3')"
+                 appDropdown>Column View</a>
+              <ul class="dropdown-menu dropdown-menu-right">
                 <li class="dropdown-item" (click)="onChangeView('col-2')"> 2 Columns</li>
                 <li class="dropdown-item" (click)="onChangeView('col-3')"> 3 Columns</li>
                 <li class="dropdown-item" (click)="onChangeView('col-4')"> 4 Columns</li>
@@ -32,7 +39,8 @@
       </ul>
     </nav>
     <div class="row" style="padding: 10px;">
-      <div class="col-md-4" [ngClass]="toggleClass()" *ngFor="let image of displayAlbum.images" style="padding-bottom: 10px;">
+      <div class="col-md-4" [ngClass]="toggleClass()" *ngFor="let image of displayAlbum.images"
+           style="padding-bottom: 10px;">
         <a [href]="image.url">
           <div class="card">
               <span class="card-img-top">
