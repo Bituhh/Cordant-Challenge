@@ -5,12 +5,10 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <label for="selector"></label>
-          <select class="custom-select" id="selector">
+          <select class="custom-select" id="selector" (change)="onSelect(+selectElement.value)" #selectElement>
             <option class="custom-control"
-                    [value]="album.name"
-                    *ngFor="let album of user.albums"
-                    (selectstart)="onSelect(album)"
-                    (select)="onSelect(album)">
+                    *ngFor="let album of user.albums;let i = index"
+                    [value]="i">
               {{album.name}}
             </option>
           </select>
@@ -29,39 +27,15 @@
                  (click)="onChangeView('col-3')"
                  appDropdown>Column View</a>
               <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-item" (click)="onChangeView('col-2')"> 2 Columns</li>
-                <li class="dropdown-item" (click)="onChangeView('col-3')"> 3 Columns</li>
-                <li class="dropdown-item" (click)="onChangeView('col-4')"> 4 Columns</li>
+                <li class="dropdown-item" (click)="onChangeView('col-2')" style="cursor: pointer;"> 2 Columns</li>
+                <li class="dropdown-item" (click)="onChangeView('col-3')" style="cursor: pointer;"> 3 Columns</li>
+                <li class="dropdown-item" (click)="onChangeView('col-4')" style="cursor: pointer;"> 4 Columns</li>
               </ul>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
-    <div class="row" style="padding: 10px;">
-      <div class="col-md-4" [ngClass]="toggleClass()" *ngFor="let image of displayAlbum.images"
-           style="padding-bottom: 10px;">
-        <a [href]="image.url">
-          <div class="card">
-              <span class="card-img-top">
-                <img class="card-img img-fluid" [src]="image.url" [alt]="image.name">
-              </span>
-            <span class="card-title text-center">{{image.name}}</span>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 text-center" style="padding-bottom: 10px">
-        <button class="btn btn-primary">Edit Album</button>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
-<!--<i class="nav-item navbar-brand">{{user.name}}</i>-->
-
-<!--<nav class="nav nav-tabs navbar-expand">-->
-<!--  <ul class="navbar-nav">-->
-<!--    <li class="nav-item" *ngFor="let album of user.albums"><a href="#" class="nav-link active" >{{album.name}}</a></li>-->
-<!--  </ul>-->
-<!--</nav>-->

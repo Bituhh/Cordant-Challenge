@@ -1,0 +1,22 @@
+<div class="row" style="padding: 10px;">
+  <div class="col-md-4" [ngClass]="toggleViewMode()" *ngFor="let image of displayAlbum.images"
+       style="padding-bottom: 10px;">
+    <a [href]="image.url">
+      <div class="card">
+              <span class="card-img-top">
+                <img class="card-img img-fluid" [src]="image.url" [alt]="image.name">
+              </span>
+        <span class="card-title text-center">{{image.name}}</span>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 text-center" style="padding-bottom: 10px">
+    <div class="btn-group" *ngIf="pages.length > 1">
+      <button class="btn btn-success"><fa name="angle-double-left"></fa></button>
+      <button class="btn btn-primary" *ngFor="let page of pages">{{page}}</button>
+      <button class="btn btn-success"><fa name="angle-double-right"></fa></button>
+    </div>
+  </div>
+</div>

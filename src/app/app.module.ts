@@ -11,6 +11,7 @@ import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {DropdownDirective} from './shared/dropdown.directive';
+import {ImageDetailsComponent} from './user-details/image-details/image-details.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {DropdownDirective} from './shared/dropdown.directive';
     UserComponent,
     UserListComponent,
     UserDetailsComponent,
+    ImageDetailsComponent,
     LimitLengthPipe,
     DropdownDirective,
   ],
