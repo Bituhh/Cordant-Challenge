@@ -24,7 +24,7 @@
   </div>
 </div>
 <div class="row" style="padding: 10px;">
-  <div class="col-md-4" [ngClass]="toggleViewMode()" *ngFor="let image of displayAlbum.images"
+  <div class="col-md-4" [ngClass]="toggleViewMode()" *ngFor="let image of displayImages"
        style="padding-bottom: 10px;">
     <a [href]="image.url">
       <div class="card">
@@ -38,11 +38,13 @@
 </div>
 <div class="row">
   <div class="col-12 text-center" style="padding-bottom: 10px">
-    <div class="btn-group">
-      <button class="btn btn-success"><fa name="angle-double-left"></fa></button>
-      <button class="btn btn-primary" *ngFor="let page of pages">{{page}}</button>
-      <button class="btn btn-success"><fa name="angle-double-right"></fa></button>
+    <div class="btn-group" *ngIf="pages.length > 1">
+      <button class="btn btn-primary"
+              [ngClass]="{active: page === currentPage}"
+              *ngFor="let page of pages; let i = index"
+              (click)="getPages(i)">
+        {{page}}
+      </button>
     </div>
   </div>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;
