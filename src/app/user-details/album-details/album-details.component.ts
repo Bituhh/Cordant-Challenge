@@ -59,6 +59,9 @@ export class AlbumDetailsComponent implements OnInit {
   }
 
   getPages(index) {
+    // Following pagination logic adapted form github https://gist.github.com/kottenator/9d936eb3e4e3c3e02598
+    // Some changes where made to adapt to TypeScript and code structure
+
     let c = this.pages[index];
 
     // if '...' is selected pick next page.
@@ -69,6 +72,7 @@ export class AlbumDetailsComponent implements OnInit {
       );
       c = previousIndex > index ? (this.pages[index + 1] - 1) : (this.pages[index - 1] + 1);
     }
+
     const delta = 2;
     const left = c - delta;
     const right = c + delta + 1;
