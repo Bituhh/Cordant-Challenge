@@ -13,29 +13,8 @@
             </option>
           </select>
         </li>
-        <li class="dropdown">
-          <a style="cursor: pointer;" class="nav-link dropdown-toggle" role="button" appDropdown>
-            <fa name="th"></fa>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <li class="dropdown-item">
-              <a class="dropdown-item-text" (click)="onChangeView('col-1')">List View</a>
-            </li>
-            <li class="dropdown-item dropdown dropleft">
-              <a class="dropdown-item-text dropdown-toggle"
-                 role="button"
-                 (click)="onChangeView('col-3')"
-                 appDropdown>Column View</a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-item" (click)="onChangeView('col-2')" style="cursor: pointer;"> 2 Columns</li>
-                <li class="dropdown-item" (click)="onChangeView('col-3')" style="cursor: pointer;"> 3 Columns</li>
-                <li class="dropdown-item" (click)="onChangeView('col-4')" style="cursor: pointer;"> 4 Columns</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
       </ul>
     </nav>
-    <router-outlet></router-outlet>
+    <app-album-details [userIndex]="userIndex"></app-album-details>
   </div>
 </div>

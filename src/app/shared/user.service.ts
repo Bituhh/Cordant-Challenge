@@ -335,8 +335,12 @@ export class UserService {
     return this.users.slice();
   }
 
-  getAlgums(userIndex: number): AlbumModel[] {
+  getAlbums(userIndex: number): AlbumModel[] {
     return this.users[userIndex].albums.slice();
+  }
+
+  getAlbum(userIndex: number, albumIndex: number): AlbumModel {
+    return this.users[userIndex].albums[albumIndex];
   }
 
   addAlbum(userIndex: number, album: AlbumModel): void {

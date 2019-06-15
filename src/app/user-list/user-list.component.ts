@@ -20,12 +20,8 @@ export class UserListComponent implements OnInit {
     this.users = this.userService.getUsers();
     this.route.params.subscribe(
       (params: Params) => {
-        if (params.id) {
-          this.isViewMode = true;
-        } else {
-          this.isViewMode = false;
-        }
+        this.isViewMode =  params.id !== null;
       }
-    )
+    );
   }
 }

@@ -8,10 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import {RoutingModule} from './routing.module';
 import {UserDetailsComponent} from './user-details/user-details.component';
 import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {DropdownDirective} from './shared/dropdown.directive';
-import {ImageDetailsComponent} from './user-details/image-details/image-details.component';
+import {AlbumDetailsComponent} from './user-details/album-details/album-details.component';
 
 
 @NgModule({
@@ -21,7 +20,7 @@ import {ImageDetailsComponent} from './user-details/image-details/image-details.
     UserComponent,
     UserListComponent,
     UserDetailsComponent,
-    ImageDetailsComponent,
+    AlbumDetailsComponent,
     LimitLengthPipe,
     DropdownDirective,
   ],
