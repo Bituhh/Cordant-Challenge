@@ -1,16 +1,12 @@
 .sidebar-wrapper {
-  display: list-item;
-  text-align: center;
-  width: 30%;
-  height: 100%;
   position: fixed;
-  right: 0px;
-}
-
-.container {
-  padding-top: 50px;
-  padding-right: 30%;
-  z-index: -999;
+  top: 56px;
+  right: 0;
+  height: 100%;
+  display: table;
+  padding: 15px;
+  text-align: center;
+  overflow-y: scroll;
 }
 
 fa.btn {

@@ -26,10 +26,10 @@
 <div class="row" style="padding: 10px;">
   <div class="col-md-4" [ngClass]="toggleViewMode()" *ngFor="let image of displayImages"
        style="padding-bottom: 10px;">
-    <a [href]="image.url">
+    <a href="{{image.url}}">
       <div class="card">
               <span class="card-img-top">
-                <img class="card-img img-fluid" [src]="image.url" [alt]="image.name">
+                <img class="card-img img-fluid" src="{{image.url}}" alt="{{image.name}}">
               </span>
         <span class="card-title text-center">{{image.name}}</span>
       </div>

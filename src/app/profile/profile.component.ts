@@ -30,13 +30,9 @@ export class ProfileComponent implements OnInit {
 
   onToggleAddAlbum() {
     this.displayAddAlbum = !this.displayAddAlbum;
-    // if (this.displayAddAlbum) {
-    //   this.inputNewAlbum.focus();
-    // }
   }
 
   onAddAlbum() {
-    console.log(this.inputNewAlbum.nativeElement.value);
     if (this.inputNewAlbum.nativeElement.value) {
       this.displayAddAlbum = !this.displayAddAlbum;
       const album = new AlbumModel(this.inputNewAlbum.nativeElement.value);

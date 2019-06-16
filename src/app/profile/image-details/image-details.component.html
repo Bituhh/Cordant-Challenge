@@ -1,2 +1,20 @@
-{{activeAlbum.name}}
-jakldsfjadsklfj sdf ;adsjf lkajd;kfjasdkfkldsjfklsjadkljads;lf asdkf ljadkljlkasdjf ;akldsjflkad s;flkja sd;kfj padsifj lkdsjfiuobefnk lsdhfiojdklsk adsij flkasd fiosd ;fklasd ;kfa;sd f;jkashd filk;sdjaf;kjasd;lkfjioas d;fjsldkjf ioa sdnfkjnadokfn ;osidjfklaj sdio; nadsfnbioasdjfkja dsfklj asd;fkj n;jn;oj
+<div class="row border" style="margin-top: 15px; border-radius: 10px; padding-top: 10px">
+  <div class="col-12 text-center">
+    <h4 class="navbar-brand col-10">{{activeAlbum.name}}</h4>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-outline-primary" style="border: 1px dashed">
+        <fa name="plus" class="col-2"></fa>
+      </button>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let image of activeAlbum.images">
+          <div class="card">
+            <h6 class="card-title">{{image.name}}</h6>
+            <div class="card-img"><img src="{{image.url}}" alt="{{image.name}}" class="img-fluid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
