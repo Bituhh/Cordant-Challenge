@@ -1,0 +1,29 @@
+<nav class="navbar navbar-nav bg-light sidebar-wrapper" style="padding: 15px;">
+  <h3 class="navbar-brand">My Albums</h3>
+  <hr>
+  <div class="list-group">
+    <div class="btn-group list-group-item"
+         [ngClass]="{active: selected === i }"
+         routerLinkActive="active"
+         *ngFor="let album of activeUser.albums;let i = index"
+         style="padding-right: 15px; padding-left: 15px;">
+      <a class="btn btn col-10" [routerLink]="[i]">{{album.name}}</a>
+      <fa name="edit" class="btn col-2" [routerLink]="[i, 'edit']"></fa>
+    </div>
+    <div class="list-group-item">
+      <a class="list-group-item btn btn-outline-primary col-12" [ngClass]="{active: displayAddAlbum }"
+         style="border: 1px dashed" (click)="onToggleAddAlbum()"> New Album
+        <fa name="plus"></fa>
+      </a>
+    </div>
+    <div class="list-group-item" [hidden]="!displayAddAlbum">
+      <label for="new-album">New Album Name:</label>
+      <input type="text" id="new-album" class="form-control col-12" #inputNewAlbum>
+      <fa name="check" class="btn col-6" (click)="onAddAlbum()"></fa>
+      <fa name="times" class="btn col-6" (click)="onCancel()"></fa>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -463,8 +463,9 @@ export class UserService {
     return this.users[userIndex].albums[albumIndex];
   }
 
-  addAlbum(userIndex: number, album: AlbumModel): void {
+  addAlbum(userIndex: number, album: AlbumModel): number {
     this.users[userIndex].albums.push(album);
+    return this.users[userIndex].albums.length - 1;
   }
 
   addImage(userIndex: number, albumName: string, image: ImageModel): void {

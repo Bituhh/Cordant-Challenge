@@ -11,6 +11,8 @@ import {LimitLengthPipe} from './user-list/user/limit-length.pipe';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {DropdownDirective} from './shared/dropdown.directive';
 import {AlbumDetailsComponent} from './user-details/album-details/album-details.component';
+import {ProfileComponent} from './profile/profile.component';
+import {ImageDetailsComponent} from './profile/image-details/image-details.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import {AlbumDetailsComponent} from './user-details/album-details/album-details.
     UserListComponent,
     UserDetailsComponent,
     AlbumDetailsComponent,
+    ProfileComponent,
+    ImageDetailsComponent,
     LimitLengthPipe,
     DropdownDirective,
   ],
