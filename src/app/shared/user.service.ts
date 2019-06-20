@@ -185,17 +185,7 @@ export class UserService {
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
           ]
         ),
-        new AlbumModel('Album 5',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
-          [
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-            new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
-          ]
-        ),
+        new AlbumModel('Album 5'),
 
       ]
     ),

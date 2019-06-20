@@ -1,17 +1,31 @@
-<div class="row border" style="margin-top: 15px; border-radius: 10px; padding-top: 10px">
+<div class="row border mt-5 p-3 pr-4" style="border-radius: 10px;">
   <div class="col-12 text-center">
-    <h4 class="navbar-brand col-10">{{activeAlbum.name}}</h4>
+    <h4 class="navbar-brand text-center">{{activeAlbum.name}}</h4>
+    <a href="#">
+      <fa name="edit"></fa>
+    </a>
   </div>
   <div class="row">
     <div class="col-12">
-      <button class="btn btn-outline-primary" style="border: 1px dashed">
-        <fa name="plus" class="col-2"></fa>
-      </button>
       <div class="row">
-        <div class="col-md-3" *ngFor="let image of activeAlbum.images">
-          <div class="card">
-            <h6 class="card-title">{{image.name}}</h6>
-            <div class="card-img"><img src="{{image.url}}" alt="{{image.name}}" class="img-fluid"></div>
+        <div class="col-md-4 card-wrapper">
+          <div class="card" style="width: 250px; height: 175px;">
+            <button class="btn btn-outline-primary col-12" style="border: 1px dashed; height: 100%;">
+              <fa name="plus"></fa>
+              <br> New Image
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4 card-wrapper" *ngFor="let image of activeAlbum.images">
+          <div class="card" style="width: 250px; height: 175px;">
+            <h6 class="card-title form-inline text-center ml-1 mt-1">{{image.name}}
+              <a href="#" class="ml-auto mr-2">
+                <fa name="times"></fa>
+              </a>
+            </h6>
+            <div class="card-img">
+              <img src="{{image.url}}" alt="{{image.name}}" class="img-fluid">
+            </div>
           </div>
         </div>
       </div>

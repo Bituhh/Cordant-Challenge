@@ -7,7 +7,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {ImageDetailsComponent} from './profile/image-details/image-details.component';
 
 const appRouting: Routes = [
-  {path: '', redirectTo: '/users', pathMatch: 'full'},
+  {path: '', redirectTo: '/users/0  ', pathMatch: 'full'},
   {
     path: 'users', component: UserListComponent, children: [
       {path: ':id', component: UserDetailsComponent},

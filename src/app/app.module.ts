@@ -13,6 +13,10 @@ import {DropdownDirective} from './shared/dropdown.directive';
 import {AlbumDetailsComponent} from './user-details/album-details/album-details.component';
 import {ProfileComponent} from './profile/profile.component';
 import {ImageDetailsComponent} from './profile/image-details/image-details.component';
+import {ModalComponent} from './header/modal/modal.component';
+import {ConfirmModalComponent} from './header/modal/confirm-modal/confirm-modal.component';
+import {AlertModalComponent} from './header/modal/alert-modal/alert-modal.component';
+import {EditModalComponent} from './header/modal/edit-modal/edit-modal.component';
 
 
 @NgModule({
@@ -27,6 +31,10 @@ import {ImageDetailsComponent} from './profile/image-details/image-details.compo
     ImageDetailsComponent,
     LimitLengthPipe,
     DropdownDirective,
+    ModalComponent,
+    ConfirmModalComponent,
+    AlertModalComponent,
+    EditModalComponent,
   ],
   imports: [
     BrowserModule,
