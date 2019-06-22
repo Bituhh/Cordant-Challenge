@@ -32,12 +32,13 @@
       </div>
     </a>
   </div>
+  <h5 class="col-12 text-center" *ngIf="!displayImages.length > 0">There are no images in this album!</h5>
 </div>
 <div class="row">
   <div class="col-12 text-center pb-3">
     <div class="btn-group" *ngIf="pages.length > 1">
       <button class="btn btn-primary"
-              [ngClass]="{active: page === currentPage}"
+              [disabled]="page === currentPage"
               *ngFor="let page of pages; let i = index"
               (click)="getPages(i)">
         {{page}}

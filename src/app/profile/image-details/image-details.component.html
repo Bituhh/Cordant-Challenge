@@ -1,7 +1,7 @@
-<div class="row border mt-5 p-3 pl-5" style="border-radius: 10px;">
+<div class="container border mt-5 p-3 pl-5" style="border-radius: 10px;">
   <!-- On view mode -->
   <div class="col-12 text-center" *ngIf="!isEditMode">
-    <h4 class="navbar-brand text-center">{{activeAlbum.name}}</h4>
+    <h4 class="navbar-brand text-center">{{displayAlbum.name}}</h4>
     <a (click)="toggleRename()">
       <fa name="edit"></fa>
     </a>
@@ -10,7 +10,7 @@
   <div class="col-12 text-center mb-3 form-inline" *ngIf="isEditMode">
     <label class="col-8">
       <input type="text"
-             value="{{activeAlbum.name}}"
+             value="{{displayAlbum.name}}"
              class="form-control col-12"
              (keyup.enter)="onRename(inputElement.value)"
              #inputElement>
@@ -27,7 +27,7 @@
   <div class="row">
     <div class="col-12">
       <div class="row">
-        <div class="col-md-4 card-wrapper" *ngIf="isEditMode"> <!--On Edit Mode Add Image Button-->
+        <div class="col-lg-3 col-md-4 col-sm-6 card-wrapper" *ngIf="isEditMode"> <!--On Edit Mode Add Image Button-->
           <div class="card">
             <button class="btn btn-outline-primary col-12" style="border: 1px dashed; height: 100%;">
               <fa name="plus"></fa>
@@ -35,7 +35,7 @@
             </button>
           </div>
         </div>
-        <div class="col-md-4 card-wrapper" *ngFor="let image of activeAlbum.images"><!--Image Cards -->
+        <div class="col-lg-3 col-md-4 col-sm-6  card-wrapper" *ngFor="let image of displayImages"><!--Image Cards -->
           <div class="card">
             <h6 class="card-title form-inline text-center ml-1 mt-1">{{image.name}}
               <a class="ml-auto mr-2">
@@ -47,6 +47,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="pages.length > 1">
+    <div class="col-12 text-center">
+      <div class="btn-group">
+        <button class="btn btn-primary"
+                [disabled]="currentPage === page"
+                *ngFor="let page of pages;let i = index"
+                (click)="getPages(i)">{{page}}</button>
       </div>
     </div>
   </div>

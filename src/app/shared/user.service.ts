@@ -10,7 +10,6 @@ export class UserService {
       'User 1',
       [
         new AlbumModel('Album 1',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -153,7 +152,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 2',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -164,7 +162,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 3',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -175,7 +172,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 4',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -193,7 +189,6 @@ export class UserService {
       'User 2',
       [
         new AlbumModel('Album 1',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -204,7 +199,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 2',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -215,7 +209,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 3',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -226,7 +219,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 4',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -237,7 +229,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 5',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -253,7 +244,6 @@ export class UserService {
       'User 3',
       [
         new AlbumModel('Album 1',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -264,7 +254,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 2',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -275,7 +264,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 3',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -286,7 +274,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 4',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -297,7 +284,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 5',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -313,7 +299,6 @@ export class UserService {
       'User 4',
       [
         new AlbumModel('Album 1',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -324,7 +309,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 2',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -335,7 +319,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 3',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -346,7 +329,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 4',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -357,7 +339,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 5',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -373,7 +354,6 @@ export class UserService {
       'User 5',
       [
         new AlbumModel('Album 1',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -384,7 +364,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 2',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -395,7 +374,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 3',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -406,7 +384,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 4',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
@@ -417,7 +394,6 @@ export class UserService {
           ]
         ),
         new AlbumModel('Album 5',
-          new ImageModel('Cover', 'https://cdn.pixabay.com/photo/2015/03/26/09/48/sunset-690333__340.jpg'),
           [
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),
             new ImageModel('Horizon', 'https://hdwallsource.com/img/2014/10/beautiful-images-40120-41056-hd-wallpapers.jpg'),

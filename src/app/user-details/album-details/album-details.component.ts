@@ -15,9 +15,9 @@ export class AlbumDetailsComponent implements OnInit {
 
   displayAlbum: AlbumModel;
   displayImages: ImageModel[];
-  private displayImagesLimit = 12;
   private viewMode = 'col-3';
 
+  private displayImagesLimit = 12;
   currentPage = 1;
   maximumPage: number;
   pages = [];
@@ -32,7 +32,8 @@ export class AlbumDetailsComponent implements OnInit {
         this.albumIndex = this.albumIndex ? this.albumIndex : 0;
         this.displayAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
         this.maximumPage = Math.ceil(this.displayAlbum.images.length / this.displayImagesLimit);
-        this.getPages(0);
+        this.currentPage = 0;
+        this.getPages(this.currentPage);
       }
     );
     this.route.queryParams.subscribe(
@@ -40,7 +41,8 @@ export class AlbumDetailsComponent implements OnInit {
         this.albumIndex = params.album ? params.album : 0;
         this.displayAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
         this.maximumPage = Math.ceil(this.displayAlbum.images.length / this.displayImagesLimit);
-        this.getPages(0);
+        this.currentPage = 0;
+        this.getPages(this.currentPage);
       }
     );
   }
@@ -66,7 +68,10 @@ export class AlbumDetailsComponent implements OnInit {
     // Following pagination logic adapted form github https://gist.github.com/kottenator/9d936eb3e4e3c3e02598
     // Some changes where made to adapt to TypeScript and code structure
 
-    let c = this.pages[index];
+    let c: any = 1;
+    if (this.pages.length > 0) {
+      c = this.pages[index];
+    }
 
     // if '...' is selected pick next page.
     if (c === '...') {

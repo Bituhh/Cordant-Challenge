@@ -16,7 +16,7 @@ a:not([href]):hover {
   cursor: pointer;
 }
 
-.card {
-  width: 250px;
-  height: 175px;
-}
+/*.card {*/
+/*  width: 250px;*/
+/*  height: 175px;*/
+/*}*/
