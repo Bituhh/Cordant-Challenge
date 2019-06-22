@@ -439,7 +439,7 @@ export class UserService {
   getUsers(): UserModel[] {
     return this.users.slice();
   }
-
+  
   addUser(user: UserModel): UserModel[] {
     this.users.push(user);
     return this.users.slice();
@@ -451,6 +451,10 @@ export class UserService {
 
   getAlbum(userIndex: number, albumIndex: number): AlbumModel {
     return this.users[userIndex].albums[albumIndex];
+  }
+
+  updateAlbum(userIndex: number, albumIndex: number, album: AlbumModel): AlbumModel {
+    return this.users[userIndex].albums[albumIndex] = album;
   }
 
   addAlbum(userIndex: number, album: AlbumModel): number {

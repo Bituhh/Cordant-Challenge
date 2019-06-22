@@ -14,9 +14,9 @@
              (click)="onChangeView('col-3')"
              appDropdown>Column View</a>
           <ul class="dropdown-menu dropdown-menu-right">
-            <li class="dropdown-item" (click)="onChangeView('col-2')" style="cursor: pointer;"> 2 Columns</li>
-            <li class="dropdown-item" (click)="onChangeView('col-3')" style="cursor: pointer;"> 3 Columns</li>
-            <li class="dropdown-item" (click)="onChangeView('col-4')" style="cursor: pointer;"> 4 Columns</li>
+            <li class="dropdown-item" (click)="onChangeView('col-2')">2 Columns</li>
+            <li class="dropdown-item" (click)="onChangeView('col-3')">3 Columns</li>
+            <li class="dropdown-item" (click)="onChangeView('col-4')">4 Columns</li>
           </ul>
         </li>
       </ul>
@@ -25,12 +25,10 @@
 </div>
 <div class="row p-1">
   <div class="col-md-4 mb-3" [ngClass]="toggleViewMode()" *ngFor="let image of displayImages">
-    <a href="{{image.url}}">
+    <a (click)="onViewImage()">
       <div class="card">
-              <span class="card-img-top">
-                <img class="card-img img-fluid" src="{{image.url}}" alt="{{image.name}}">
-              </span>
-        <span class="card-title text-center">{{image.name}}</span>
+        <img class="card-img img-fluid" src="{{image.url}}" alt="{{image.name}}">
+        <h6 class="card-title text-center">{{image.name}}</h6>
       </div>
     </a>
   </div>

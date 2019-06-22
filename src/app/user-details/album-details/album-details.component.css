@@ -1,0 +1,17 @@
+li:hover {
+  cursor: pointer;
+}
+
+a:not([href]) {
+  color: #007bff;
+}
+
+a:not([href]):hover {
+  color: #007bff;
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.card:hover {
+  filter: brightness(85%);
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../shared/user.service';
 import {UserModel} from '../../shared/user.model';
 import {ActivatedRoute, Params} from '@angular/router';
@@ -13,18 +13,34 @@ export class ImageDetailsComponent implements OnInit {
 
   userIndex = 0;
   activeUser: UserModel;
-  activeAlbum = this.userService.getAlbum(this.userIndex, 0);
-  mode: string = 'view';
+  albumIndex = 0;
+  activeAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
+  isEditMode = false;
 
   constructor(private userService: UserService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.activeUser = this.userService.getUser(this.userIndex);
     this.route.params.subscribe(
       (params: Params) => {
-        this.activeAlbum = this.userService.getAlbum(this.userIndex, params.id as number);
+        this.albumIndex = params.id as number;
+        this.activeAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
+        this.isEditMode = false;
       }
     );
+  }
+
+  toggleRename() {
+    this.isEditMode = !this.isEditMode;
+  }
+
+  onRename(value: string) {
+    if (value) {
+      this.activeAlbum.name = value;
+      this.userService.updateAlbum(this.userIndex, this.albumIndex, this.activeAlbum);
+      this.toggleRename();
+    }
   }
 }

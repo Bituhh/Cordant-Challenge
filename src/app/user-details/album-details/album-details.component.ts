@@ -45,6 +45,10 @@ export class AlbumDetailsComponent implements OnInit {
     );
   }
 
+  onViewImage() {
+    // Call modal service
+  }
+
   onChangeView(mode: string) {
     this.viewMode = mode;
   }

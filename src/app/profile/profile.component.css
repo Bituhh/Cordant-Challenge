@@ -12,3 +12,33 @@
 fa.btn {
   cursor: pointer;
 }
+
+a:not([href]) {
+  color: #007bff;
+}
+
+a:not([href]):hover {
+  color: #007bff;
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.list-group-item a {
+  color: #007bff;
+}
+
+.list-group-item.active a {
+  color: white;
+}
+
+.list-group-item a:hover {
+  color: #007bff;
+  text-decoration: underline;
+  filter: brightness(50%);
+}
+
+/*.list-group-item.active:hover {*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+
+/*}*/
