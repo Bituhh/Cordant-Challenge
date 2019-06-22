@@ -56,6 +56,10 @@ export class ImageDetailsComponent implements OnInit {
     }
   }
 
+  getHeight(): string {
+    return this.displayImages.length > 0 ? '100%' : '200px';
+  }
+
   getPages(index: any) {
     // Following pagination logic adapted form github https://gist.github.com/kottenator/9d936eb3e4e3c3e02598
     // Some changes where made to adapt to TypeScript and code structure

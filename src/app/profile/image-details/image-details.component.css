@@ -15,8 +15,3 @@ a:not([href]):hover {
   filter: brightness(50%);
   cursor: pointer;
 }
-
-/*.card {*/
-/*  width: 250px;*/
-/*  height: 175px;*/
-/*}*/

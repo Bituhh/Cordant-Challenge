@@ -28,10 +28,11 @@
     <div class="col-12">
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 card-wrapper" *ngIf="isEditMode"> <!--On Edit Mode Add Image Button-->
-          <div class="card">
+          <div class="card" [ngStyle]="{height: getHeight()}">
             <button class="btn btn-outline-primary col-12" style="border: 1px dashed; height: 100%;">
               <fa name="plus"></fa>
-              <br> New Image
+              <br>
+              New Image
             </button>
           </div>
         </div>
