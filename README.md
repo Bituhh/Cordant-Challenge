@@ -1,6 +1,11 @@
-# CordantChallenge
+# Cordant Challenge
+
+This project was created by Victor Coelho De Oliveira as part of Cordant Challenge for the Junior Dev Job Opportunity.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
+
+## Instructions
 
 ## Development server
 
