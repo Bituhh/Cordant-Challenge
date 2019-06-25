@@ -18,7 +18,7 @@ interface CompanyInterface {
 }
 
 export class UserInterface {
-  constructor(public id: number,
+  constructor(public id: string,
               public name: string,
               public username: string,
               public email: string,

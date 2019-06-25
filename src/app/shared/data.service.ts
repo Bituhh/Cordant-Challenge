@@ -8,12 +8,7 @@ import {map, tap} from 'rxjs/operators';
 
 @Injectable({providedIn: 'root'})
 export class DataService {
-
-  users: UserInterface[];
-  albums: AlbumInterface[];
-
   constructor(private http: HttpClient) {
-    this.getUsers().subscribe((users: UserInterface[]) => this.users = users);
   }
 
   getUser(userId: number): Observable<UserInterface> {
@@ -43,21 +38,4 @@ export class DataService {
         })
       );
   }
-
-  // updateAlbum(userIndex: number, albumIndex: number, album: AlbumInterface): AlbumInterface {
-  //   return this.users[userIndex].albums[albumIndex] = album;
-  // }
-  //
-  // addAlbum(userIndex: number, album: AlbumInterface): number {
-  //   this.users[userIndex].albums.push(album);
-  //   return this.users[userIndex].albums.length - 1;
-  // }
-
-  // addImage(userIndex: number, albumName: string, image: ImageInterface): void {
-  //   this.users[userIndex].albums.find(
-  //     (album: AlbumInterface) => {
-  //       return album.name === albumName;
-  //     }
-  //   ).images.push(image);
-  // }
 }
