@@ -1,17 +1,17 @@
-.card-wrapper {
-  margin-bottom: 15px;
-}
+/*.card-wrapper {*/
+/*  margin-bottom: 15px;*/
+/*}*/
 
-.btn:hover {
-  cursor: pointer;
-}
+/*.btn:hover {*/
+/*  cursor: pointer;*/
+/*}*/
 
-a:not([href]) {
-  color: #007bff;
-}
+/*a:not([href]) {*/
+/*  color: #007bff;*/
+/*}*/
 
-a:not([href]):hover {
-  color: #007bff;
-  filter: brightness(50%);
-  cursor: pointer;
-}
+/*a:not([href]):hover {*/
+/*  color: #007bff;*/
+/*  filter: brightness(50%);*/
+/*  cursor: pointer;*/
+/*}*/

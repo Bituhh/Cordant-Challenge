@@ -5,16 +5,16 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <label for="selector"></label>
-          <select class="custom-select" id="selector" (change)="onSelect(+selectElement.value)" #selectElement>
+          <select class="custom-select" id="selector" [value]="''" (change)="onSelect(+selectElement.value)" #selectElement>
             <option class="custom-control"
-                    *ngFor="let album of user.albums;let i = index"
-                    [value]="i">
-              {{album.name}}
+                    *ngFor="let album of albums;"
+                    [value]="album.id">
+              {{album.title}}
             </option>
           </select>
         </li>
       </ul>
     </nav>
-    <app-album-details [userIndex]="userIndex"></app-album-details>
+    <router-outlet></router-outlet>
   </div>
 </div>

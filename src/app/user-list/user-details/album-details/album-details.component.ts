@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {UserService} from '../../shared/user.service';
-import {ActivatedRoute, Params} from '@angular/router';
-import {AlbumModel} from '../../shared/album.model';
-import {ImageModel} from '../../shared/image.model';
+import {DataService} from '../../../shared/data.service';
+import {ActivatedRoute, Data} from '@angular/router';
+import {AlbumInterface} from '../../../shared/album.interface';
+import {ImageInterface} from '../../../shared/image.interface';
 
 @Component({
   selector: 'app-album-details',
@@ -10,44 +10,33 @@ import {ImageModel} from '../../shared/image.model';
   styleUrls: ['./album-details.component.css']
 })
 export class AlbumDetailsComponent implements OnInit {
-  @Input() userIndex: number;
-  private albumIndex: number;
 
-  displayAlbum: AlbumModel;
-  displayImages: ImageModel[];
+  @Input() album: AlbumInterface;
+  images: ImageInterface[];
+  displayImages: ImageInterface[];
   private viewMode = 'col-3';
 
   private displayImagesLimit = 12;
-  currentPage = 1;
+  currentPage = 0;
   maximumPage: number;
   pages = [];
 
-  constructor(private route: ActivatedRoute, private userService: UserService) {
+  constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(
-      (params: Params) => {
-        this.userIndex = params.id as number;
-        this.albumIndex = this.albumIndex ? this.albumIndex : 0;
-        this.displayAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
-        this.maximumPage = Math.ceil(this.displayAlbum.images.length / this.displayImagesLimit);
-        this.currentPage = 0;
-        this.getPages(this.currentPage);
-      }
-    );
-    this.route.queryParams.subscribe(
-      (params: Params) => {
-        this.albumIndex = params.album ? params.album : 0;
-        this.displayAlbum = this.userService.getAlbum(this.userIndex, this.albumIndex);
-        this.maximumPage = Math.ceil(this.displayAlbum.images.length / this.displayImagesLimit);
-        this.currentPage = 0;
-        this.getPages(this.currentPage);
-      }
-    );
+    this.route.params.subscribe(params => console.log(params.id));
+    this.route.data.subscribe((data: Data) => {
+      this.images = data.images;
+      this.maximumPage = Math.ceil(this.images.length / this.displayImagesLimit);
+      this.displayImages = this.images.slice(0, this.displayImagesLimit);
+      this.currentPage = 0;
+      this.getPages(this.currentPage);
+    });
   }
 
   onViewImage() {
+    console.log(this.images);
     // Call modal service
   }
 
@@ -109,6 +98,6 @@ export class AlbumDetailsComponent implements OnInit {
     }
 
     this.currentPage = c;
-    this.displayImages = this.displayAlbum.images.slice((c - 1) * this.displayImagesLimit, c * this.displayImagesLimit);
+    this.displayImages = this.images.slice((c - 1) * this.displayImagesLimit, c * this.displayImagesLimit);
   }
 }

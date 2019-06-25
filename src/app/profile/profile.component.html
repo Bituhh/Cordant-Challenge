@@ -1,33 +1,33 @@
-<nav class="navbar navbar-nav bg-light col-3 sidebar-wrapper"> <!--Sidebar-->
-  <h3 class="navbar-brand">My Albums</h3> <!--Sidebar Header-->
-  <hr>
-  <ul class="list-group"> <!--Sidebar Menu-->
-    <li class="list-group-item" [hidden]="displayAddAlbum"> <!--New Album Button-->
-      <button class="list-group-item btn btn-outline-primary col-12"
-         [ngClass]="{active: displayAddAlbum }"
-         style="border: 1px dashed"
-         (click)="onToggleAddAlbum()">New Album
-        <fa name="plus"></fa>
-      </button>
-    </li>
-    <li class="list-group-item" [hidden]="!displayAddAlbum"> <!--New Album Input-->
-      <label class="col-12 form-inline">
-        <input type="text"
-               class="form-control col-8"
-               placeholder="New Album Name"
-               (keyup.enter)="onAddAlbum()"
-               #inputNewAlbum>
-        <a class="col-2" (click)="onAddAlbum()"><fa name="check"></fa></a>
-        <a class="col-2" (click)="onCancel()"><fa name="times"></fa></a>
-      </label>
-    </li>
-    <li class="list-group-item"
-        routerLinkActive="active"
-        *ngFor="let album of activeUser.albums;let i = index">
-      <a class="btn col-12" [routerLink]="[i]">{{album.name}}</a>
-    </li>
-  </ul>
-</nav>
-<div class="col-9">
-  <router-outlet></router-outlet>
-</div>
+<!--<nav class="navbar navbar-nav bg-light col-3 sidebar-wrapper"> &lt;!&ndash;Sidebar&ndash;&gt;-->
+<!--  <h3 class="navbar-brand">My Albums</h3> &lt;!&ndash;Sidebar Header&ndash;&gt;-->
+<!--  <hr>-->
+<!--  <ul class="list-group"> &lt;!&ndash;Sidebar Menu&ndash;&gt;-->
+<!--    <li class="list-group-item" [hidden]="displayAddAlbum"> &lt;!&ndash;New Album Button&ndash;&gt;-->
+<!--      <button class="list-group-item btn btn-outline-primary col-12"-->
+<!--         [ngClass]="{active: displayAddAlbum }"-->
+<!--         style="border: 1px dashed"-->
+<!--         (click)="onToggleAddAlbum()">New Album-->
+<!--        <fa name="plus"></fa>-->
+<!--      </button>-->
+<!--    </li>-->
+<!--    <li class="list-group-item" [hidden]="!displayAddAlbum"> &lt;!&ndash;New Album Input&ndash;&gt;-->
+<!--      <label class="col-12 form-inline">-->
+<!--        <input type="text"-->
+<!--               class="form-control col-8"-->
+<!--               placeholder="New Album Name"-->
+<!--               (keyup.enter)="onAddAlbum()"-->
+<!--               #inputNewAlbum>-->
+<!--        <a class="col-2" (click)="onAddAlbum()"><fa name="check"></fa></a>-->
+<!--        <a class="col-2" (click)="onCancel()"><fa name="times"></fa></a>-->
+<!--      </label>-->
+<!--    </li>-->
+<!--    <li class="list-group-item"-->
+<!--        routerLinkActive="active"-->
+<!--        *ngFor="let album of activeUser.albums;let i = index">-->
+<!--      <a class="btn col-12" [routerLink]="[i]">{{album.name}}</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</nav>-->
+<!--<div class="col-9">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
