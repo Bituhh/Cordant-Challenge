@@ -1,5 +1,3 @@
-import {DataService} from './data.service';
-
 export class ImageInterface {
   constructor(public albumId: number,
               public id: number,

@@ -1,4 +1,3 @@
-import {DataService} from './data.service';
 import {ImageInterface} from './image.interface';
 
 export class AlbumInterface {

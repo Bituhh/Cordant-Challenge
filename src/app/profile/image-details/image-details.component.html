@@ -1,64 +1,64 @@
-<!--<div class="container border mt-5 p-3 pl-5" style="border-radius: 10px;">-->
-<!--  &lt;!&ndash; On view mode &ndash;&gt;-->
-<!--  <div class="col-12 text-center" *ngIf="!isEditMode">-->
-<!--    <h4 class="navbar-brand text-center">{{displayAlbum.name}}</h4>-->
-<!--    <a (click)="toggleRename()">-->
-<!--      <fa name="edit"></fa>-->
-<!--    </a>-->
-<!--  </div>-->
-<!--  &lt;!&ndash;  On edit mode&ndash;&gt;-->
-<!--  <div class="col-12 text-center mb-3 form-inline" *ngIf="isEditMode">-->
-<!--    <label class="col-8">-->
-<!--      <input type="text"-->
-<!--             value="{{displayAlbum.name}}"-->
-<!--             class="form-control col-12"-->
-<!--             (keyup.enter)="onRename(inputElement.value)"-->
-<!--             #inputElement>-->
-<!--    </label>-->
-<!--    <div class="btn-group col-4">-->
-<!--      <button class="btn btn-success col-4" (click)="onRename(inputElement.value)">-->
-<!--        <fa name="check"></fa>-->
-<!--        Save-->
-<!--      </button>-->
-<!--      <button class="btn btn-danger col-8">Delete Album</button>-->
-<!--    </div>-->
-<!--  </div>-->
+<div class="container border mt-5 p-3 pl-5" style="border-radius: 10px;">
+  <!-- On view mode -->
+  <div class="col-12 text-center" *ngIf="!isEditMode">
+    <h4 class="navbar-brand text-center">{{album.title}}</h4>
+    <a (click)="toggleRename()">
+      <fa name="edit"></fa>
+    </a>
+  </div>
+  <!--  On edit mode-->
+  <div class="col-12 text-center mb-3 form-inline" *ngIf="isEditMode">
+    <label class="col-8">
+      <input type="text"
+             value="{{album.title}}"
+             class="form-control col-12"
+             (keyup.enter)="onRename(inputElement.value)"
+             #inputElement>
+    </label>
+    <div class="btn-group col-4">
+      <button class="btn btn-success col-4" (click)="onRename(inputElement.value)">
+        <fa name="check"></fa>
+        Save
+      </button>
+      <button class="btn btn-danger col-8">Delete Album</button>
+    </div>
+  </div>
 
-<!--  <div class="row">-->
-<!--    <div class="col-12">-->
-<!--      <div class="row">-->
-<!--        <div class="col-lg-3 col-md-4 col-sm-6 card-wrapper" *ngIf="isEditMode"> &lt;!&ndash;On Edit Mode Add Image Button&ndash;&gt;-->
-<!--          <div class="card" [ngStyle]="{height: getHeight()}">-->
-<!--            <button class="btn btn-outline-primary col-12" style="border: 1px dashed; height: 100%;">-->
-<!--              <fa name="plus"></fa>-->
-<!--              <br>-->
-<!--              New Image-->
-<!--            </button>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="col-lg-3 col-md-4 col-sm-6  card-wrapper" *ngFor="let image of displayImages">&lt;!&ndash;Image Cards &ndash;&gt;-->
-<!--          <div class="card">-->
-<!--            <h6 class="card-title form-inline text-center ml-1 mt-1">{{image.name}}-->
-<!--              <a class="ml-auto mr-2">-->
-<!--                <fa name="times" *ngIf="isEditMode"></fa>-->
-<!--              </a>-->
-<!--            </h6>-->
-<!--            <div class="card-img">-->
-<!--              <img src="{{image.url}}" alt="{{image.name}}" class="img-fluid">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="row" *ngIf="pages.length > 1">-->
-<!--    <div class="col-12 text-center">-->
-<!--      <div class="btn-group">-->
-<!--        <button class="btn btn-primary"-->
-<!--                [disabled]="currentPage === page"-->
-<!--                *ngFor="let page of pages;let i = index"-->
-<!--                (click)="getPages(i)">{{page}}</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 card-wrapper" *ngIf="isEditMode"> <!--On Edit Mode Add Image Button-->
+          <div class="card" [ngStyle]="{height: getHeight()}">
+            <button class="btn btn-outline-primary col-12" style="border: 1px dashed; height: 100%;">
+              <fa name="plus"></fa>
+              <br>
+              New Image
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6  card-wrapper" *ngFor="let image of displayImages"><!--Image Cards -->
+          <div class="card">
+            <h6 class="card-title form-inline text-center ml-1 mt-1">{{image.title}}
+              <a class="ml-auto mr-2">
+                <fa name="times" *ngIf="isEditMode"></fa>
+              </a>
+            </h6>
+            <div class="card-img">
+              <img src="{{image.url}}" alt="{{image.title}}" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="pages.length > 1">
+    <div class="col-12 text-center">
+      <div class="btn-group">
+        <button class="btn btn-primary"
+                [disabled]="currentPage === page"
+                *ngFor="let page of pages;let i = index"
+                (click)="getPages(i)">{{page}}</button>
+      </div>
+    </div>
+  </div>
+</div>

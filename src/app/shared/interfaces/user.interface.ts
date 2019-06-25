@@ -1,9 +1,3 @@
-import {AlbumInterface} from './album.interface';
-import {DataService} from './data.service';
-import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {OnInit} from '@angular/core';
-
 interface AddressInterface {
   street: string;
   suite: string;
@@ -22,7 +16,6 @@ interface CompanyInterface {
   catchPhrase: string;
   bs: string;
 }
-
 
 export class UserInterface {
   constructor(public id: number,

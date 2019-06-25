@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -9,10 +10,9 @@ import {UserDetailsComponent} from './user-list/user-details/user-details.compon
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {DropdownDirective} from './shared/dropdown.directive';
 import {AlbumDetailsComponent} from './user-list/user-details/album-details/album-details.component';
-// import {ProfileComponent} from './profile/profile.component';
-// import {ImageDetailsComponent} from './profile/image-details/image-details.component';
-import {HttpClientModule} from '@angular/common/http';
+import {ProfileComponent} from './profile/profile.component';
 import {AlbumDefaultComponent} from './user-list/user-details/album-default/album-default.component';
+import {ImageDetailsComponent} from './profile/image-details/image-details.component';
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import {AlbumDefaultComponent} from './user-list/user-details/album-default/albu
     UserDetailsComponent,
     AlbumDetailsComponent,
     AlbumDefaultComponent,
-    // ProfileComponent,
-    // ImageDetailsComponent,
+    ProfileComponent,
+    ImageDetailsComponent,
     DropdownDirective,
   ],
   imports: [

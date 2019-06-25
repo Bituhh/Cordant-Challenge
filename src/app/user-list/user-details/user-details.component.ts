@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-import {UserInterface} from '../../shared/user.interface';
+import {UserInterface} from '../../shared/interfaces/user.interface';
 import {DataService} from '../../shared/data.service';
-import {AlbumInterface} from '../../shared/album.interface';
+import {AlbumInterface} from '../../shared/interfaces/album.interface';
 
 @Component({
   selector: 'app-user-details',

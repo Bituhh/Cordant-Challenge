@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
 import {DataService} from '../data.service';
-import {ImageInterface} from '../image.interface';
+import {ImageInterface} from '../interfaces/image.interface';
 
 @Injectable({providedIn: 'root'})
 export class ImagesResolver implements Resolve<ImageInterface[]> {

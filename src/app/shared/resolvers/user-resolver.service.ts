@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
 import {DataService} from '../data.service';
-import {UserInterface} from '../user.interface';
+import {UserInterface} from '../interfaces/user.interface';
 
 @Injectable({providedIn: 'root'})
 export class UserResolver implements Resolve<UserInterface> {

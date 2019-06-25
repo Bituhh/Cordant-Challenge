@@ -1,7 +1,7 @@
-import {UserInterface} from './user.interface';
-import {AlbumInterface} from './album.interface';
+import {UserInterface} from './interfaces/user.interface';
+import {AlbumInterface} from './interfaces/album.interface';
 import {Injectable} from '@angular/core';
-import {ImageInterface} from './image.interface';
+import {ImageInterface} from './interfaces/image.interface';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {map, tap} from 'rxjs/operators';

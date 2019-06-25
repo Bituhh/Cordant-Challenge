@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DataService} from '../../../shared/data.service';
 import {ActivatedRoute, Data} from '@angular/router';
-import {AlbumInterface} from '../../../shared/album.interface';
-import {ImageInterface} from '../../../shared/image.interface';
+import {AlbumInterface} from '../../../shared/interfaces/album.interface';
+import {ImageInterface} from '../../../shared/interfaces/image.interface';
 
 @Component({
   selector: 'app-album-details',

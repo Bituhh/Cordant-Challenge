@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UserInterface} from '../shared/user.interface';
+import {UserInterface} from '../shared/interfaces/user.interface';
 import {ActivatedRoute, Data, Params} from '@angular/router';
 import {DataService} from '../shared/data.service';
 
