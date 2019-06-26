@@ -18,13 +18,14 @@ interface CompanyInterface {
 }
 
 export class UserInterface {
-  constructor(public id: string,
+  constructor(public id: number,
               public name: string,
               public username: string,
               public email: string,
               public address?: AddressInterface,
               public phone?: string,
               public website?: string,
-              public company?: CompanyInterface) {
+              public company?: CompanyInterface,
+              public firebase?: string) {
   }
 }

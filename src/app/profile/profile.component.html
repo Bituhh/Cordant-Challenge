@@ -24,7 +24,8 @@
     <li class="list-group-item"
         routerLinkActive="active"
         *ngFor="let album of albums;">
-      <a class="btn col-12" [routerLink]="[album.id]">{{album.title}}</a>
+      <a class="btn col-12" [routerLink]="[album.id]"
+      [queryParams]="{firebase: album.firebase}">{{album.title}}</a>
     </li>
   </ul>
 </nav>

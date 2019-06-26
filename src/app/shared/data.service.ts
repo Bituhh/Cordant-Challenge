@@ -12,30 +12,62 @@ export class DataService {
   }
 
   getUser(userId: number): Observable<UserInterface> {
-    return this.http.get<UserInterface>('https://jsonplaceholder.typicode.com/users/' + userId);
+    return this.getUsers().pipe(map((users: UserInterface[]) => {
+        return users.find(user => user.id === userId);
+      })
+    );
   }
 
   getUsers(): Observable<UserInterface[]> {
-    return this.http.get<UserInterface[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<UserInterface[]>('https://cordantchallenge.firebaseio.com/users.json')
+      .pipe(map(res => {
+        const temp: UserInterface[] = [];
+        for (const key in res) {
+          if (res.hasOwnProperty(key)) {
+            temp.push({...res[key], firebase: key});
+          }
+        }
+        return temp;
+      }));
   }
 
-  getAlbum(albumId: number): Observable<AlbumInterface> {
-    return this.http.get<AlbumInterface>('https://jsonplaceholder.typicode.com/albums/' + albumId);
+  getAlbum(albumId: string): Observable<AlbumInterface> {
+    return this.http.get<AlbumInterface>('https://cordantchallenge.firebaseio.com/albums/' + albumId + '.json');
   }
 
   getAlbums(userId): Observable<AlbumInterface[]> {
-    return this.http.get<AlbumInterface[]>('https://jsonplaceholder.typicode.com/albums')
-      .pipe(map((albums: AlbumInterface[]) => {
-          return albums.filter((album: AlbumInterface) => album.userId === +userId);
+    return this.http.get<AlbumInterface[]>('https://cordantchallenge.firebaseio.com/albums.json')
+      .pipe(map(res => {
+          const temp: AlbumInterface[] = [];
+          for (const key in res) {
+            if (res.hasOwnProperty(key)) {
+              temp.push({...res[key], firebase: key});
+            }
+          }
+          return temp.filter(album => album.userId === userId);
         })
       );
   }
 
   getImages(albumId: number): Observable<ImageInterface[]> {
-    return this.http.get<ImageInterface[]>('https://jsonplaceholder.typicode.com/photos')
-      .pipe(map((images: ImageInterface[]) => {
-          return images.filter((image: ImageInterface) => image.albumId === +albumId);
+    return this.http.get<ImageInterface[]>('https://cordantchallenge.firebaseio.com/photos.json')
+      .pipe(map(res => {
+          const temp: ImageInterface[] = [];
+          for (const key in res) {
+            if (res.hasOwnProperty(key)) {
+              temp.push({...res[key], firebase: key});
+            }
+          }
+          return temp.filter(image => image.albumId === albumId);
         })
       );
+  }
+
+  addAlbum(album: AlbumInterface): Observable<{ name: string }> {
+    return this.http.post<{ name: string }>('https://cordantchallenge.firebaseio.com/albums.json', album);
+  }
+
+  deleteAlbum(firebaseId: string) {
+    return this.http.delete('https://cordantchallenge.firebaseio.com/albums' + firebaseId + '.json');
   }
 }

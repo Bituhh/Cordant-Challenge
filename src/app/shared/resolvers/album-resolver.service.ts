@@ -12,6 +12,6 @@ export class AlbumResolver implements Resolve<AlbumInterface> {
   resolve(route: ActivatedRouteSnapshot,
           state: RouterStateSnapshot
   ): Observable<AlbumInterface> | Promise<AlbumInterface> | AlbumInterface {
-    return this.dataService.getAlbum(+route.params.albumId);
+    return this.dataService.getAlbum(route.queryParams.firebase);
   }
 }

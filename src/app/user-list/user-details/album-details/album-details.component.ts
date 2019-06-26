@@ -25,7 +25,6 @@ export class AlbumDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => console.log(params.id));
     this.route.data.subscribe((data: Data) => {
       this.images = data.images;
       this.maximumPage = Math.ceil(this.images.length / this.displayImagesLimit);
